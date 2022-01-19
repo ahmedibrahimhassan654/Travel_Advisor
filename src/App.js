@@ -19,13 +19,14 @@ const App = () => {
     );
   }, []);
   useEffect(() => {
-    console.log(coords, bounds);
-
-    getPlacesData().then((data) => {
-      console.log(data);
-      setPlaces(data);
-      console.log(places);
-    });
+    console.log("bounds =", bounds);
+    // const { ne, sw } = bounds;
+    if (bounds) {
+      getPlacesData(bounds.sw, bounds.ne).then((data) => {
+        console.log("data =", data);
+        setPlaces(data);
+      });
+    }
   }, [coords, bounds]);
   return (
     <>
