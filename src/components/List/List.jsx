@@ -31,7 +31,9 @@ const List = () => {
   ];
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Food & Drink around you</Typography>
+      <Typography variant="h4">
+        Restaurants , Hotels& Attractions around you
+      </Typography>
       <FormControl className={classes.formControl}>
         <InputLabel id="type">Type</InputLabel>
         <Select
